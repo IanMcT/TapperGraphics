@@ -1,0 +1,17 @@
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\bin\Debug\tapped.png
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\bin\Debug\tapperGraphics.exe.config
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\bin\Debug\tapperGraphics.exe
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\bin\Debug\tapperGraphics.pdb
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics.csprojResolveAssemblyReference.cache
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\MainWindow.g.cs
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\App.g.cs
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics_Content.g.cs
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics_MarkupCompile.cache
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics_MarkupCompile.lref
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\MainWindow.baml
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics.g.resources
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics.Properties.Resources.resources
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics.csproj.GenerateResource.Cache
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics.csproj.CoreCompileInputs.cache
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics.exe
+c:\users\ian.mctavish\source\repos\tapperGraphics\tapperGraphics\obj\Debug\tapperGraphics.pdb
