@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +25,57 @@ namespace tapperGraphics
             InitializeComponent();
             BitmapImage bitmap = new BitmapImage(new Uri("tapped.png", UriKind.Relative));
             canvas.Background = new ImageBrush(bitmap);
-            drawSemiTransparentBackground();
+            //drawSemiTransparentBackground();
 
+            
+            drawLeftWall();
+            drawRightWall();
+            drawBackWall();
+            drawFloor();
             drawServingBars();
+        }
+
+        private void drawLeftWall()
+        {
+            Polygon polygon = new Polygon();
+            polygon.Fill = Brushes.LimeGreen;
+            polygon.Points.Add(new Point(0, 0));
+            polygon.Points.Add(new Point(236, 0));
+            polygon.Points.Add(new Point(236, 124));
+            polygon.Points.Add(new Point(10, this.Height));
+            polygon.Points.Add(new Point(0, this.Height));
+            canvas.Children.Add(polygon);
+        }
+        private void drawBackWall()
+        {
+            Polygon polygon = new Polygon();
+            polygon.Fill = Brushes.LightYellow;
+            polygon.Points.Add(new Point(236, 124));
+            polygon.Points.Add(new Point(674, 123));
+            polygon.Points.Add(new Point(673, 0));
+            polygon.Points.Add(new Point(236, 0));
+            canvas.Children.Add(polygon);
+        }
+        private void drawFloor()
+        {
+            Polygon polygon = new Polygon();
+            polygon.Fill = Brushes.Magenta;
+            polygon.Points.Add(new Point(236, 124));
+            polygon.Points.Add(new Point(674, 123));
+            polygon.Points.Add(new Point(911, this.Height));
+            polygon.Points.Add(new Point(10, this.Height));
+            canvas.Children.Add(polygon);
+        }
+        private void drawRightWall()
+        {
+            Polygon polygon = new Polygon();
+            polygon.Fill = Brushes.Purple;
+            polygon.Points.Add(new Point(673, 0));
+            polygon.Points.Add(new Point(674, 123));
+            polygon.Points.Add(new Point(911, this.Height));
+            polygon.Points.Add(new Point(this.Width, this.Height));
+            polygon.Points.Add(new Point(this.Width, 0));
+            canvas.Children.Add(polygon);
         }
 
         private void drawSemiTransparentBackground()
@@ -41,15 +89,7 @@ namespace tapperGraphics
 
         private void drawServingBars()
         {
-            for (int i = 0; i < this.Height; i = i + 78)
-            {
-                Rectangle r = new Rectangle();
-                r.Fill = Brushes.Red;
-                r.Height = 2;
-                r.Width = this.Width;
-                canvas.Children.Add(r);
-                Canvas.SetTop(r, i);
-            }
+            //drawLinesToDetermineDistance();
 
             Rectangle topBar = new Rectangle();
             topBar.Width = 420;
@@ -82,6 +122,26 @@ namespace tapperGraphics
             canvas.Children.Add(bottomBar);
             Canvas.SetTop(bottomBar, Canvas.GetTop(thirdBar) + (Canvas.GetTop(thirdBar) - Canvas.GetTop(secondBar)));
             Canvas.SetLeft(bottomBar, Canvas.GetLeft(thirdBar) + (Canvas.GetLeft(thirdBar) - Canvas.GetLeft(secondBar)));
+        }
+
+        private void drawLinesToDetermineDistance()
+        {
+            for (int i = 0; i < this.Height; i = i + 78)
+            {
+                Rectangle r = new Rectangle();
+                r.Fill = Brushes.Red;
+                r.Height = 2;
+                r.Width = this.Width;
+                canvas.Children.Add(r);
+                Canvas.SetTop(r, i);
+            }
+        }
+
+        private void canvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Clipboard.SetText(e.GetPosition(this).ToString());
+            
+            
         }
     }
 }
